@@ -31,7 +31,7 @@ def test_complete_todo():
     browser.element('#react-select-4-option-1').perform(command.js.scroll_into_view).perform(command.js.click)
     browser.element('button#submit').click()
 
-    browser.element('[id="example-modal-sizes-title-lg"]').should(have.text('Thanks for submitting the form'))
+    browser.element('#example-modal-sizes-title-lg').should(have.text('Thanks for submitting the form'))
     browser.all('.table>tbody>tr')[0].should(have.text('Student Name Johann Bach'))
     browser.all('.table>tbody>tr')[1].should(have.text('Student Email Johann@Bach.com'))
     browser.all('.table>tbody>tr')[2].should(have.text('Gender Male'))
